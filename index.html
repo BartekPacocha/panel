@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Aplikacja Testowa</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+	<script src="script.js"></script>
+
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body ng-app="myapp" ng-controller="ListController">
+	<div class="container">
+	<aside>
+		<div id="logo">
+			<img src="img/logo.jpg" alt="">
+		</div>
+		<nav>
+			<ul>
+				<li><a href="#" id="element1">Element1</a></li>
+				<li><a href="#" id="element2">Element2</a></li>
+				<li><a href="#" id="element3">Element3</a></li>
+			</ul>
+		</nav>
+	</aside>
+	<div class="main-page">
+		<header>
+			<h1>APLIKACJA TESTOWA</h1>
+			<button class="main-button">wyloguj</button>
+		</header>
+		<div class="main-page-container">
+			<div class="panel">
+				<h3 class="panel-title">Zawartość</h3>
+
+				<div class="first-row">
+					<div class="row">
+						<label for="kolumna1">Kolumna 1:</label><input type="text" id="kolumna1" class="add-input" ng-model="addNew_kolumna1">
+					</div>
+					<div class="row">
+						<label for="kolumna2">Kolumna 2:</label><input type="text" id="kolumna2" class="add-input" ng-model="addNew_kolumna2">
+					</div>
+				</div>
+				
+				<div class="second-row">
+					<div class="row">
+						<label for="kolumna3">Kolumna 3:</label><input type="text" id="kolumna3" class="add-input" ng-model="addNew_kolumna3">
+					</div>
+					<div class="row">
+						<label for="kolumna4">Kolumna 4:</label><input type="text" id="kolumna4" class="add-input" ng-model="addNew_kolumna4">
+					</div>
+				</div>
+				
+				<button class="main-button" ng-click="add()">Dodaj</button>
+			</div>
+			<div class="panel">
+				<h3 class="panel-title">Zawartość</h3>
+				<div id="table-wrapper">
+  <div id="table-scroll">
+				<table>
+				<thead>
+					<tr>
+						<th>Kolumna 1</th>
+						<th>Kolumna 2</th>
+						<th>Kolumna 3</th>
+						<th>Kolumna 4</th>
+						<th></th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr ng-repeat="data in data">
+					<td ng-class="{selected: editingData[data.id]}">
+						<div ng-hide="editingData[data.id]">{{data.kolumna1}}</div>
+                        <div ng-show="editingData[data.id]"><input type="text" ng-model="data.kolumna1" /></div>
+					</td>
+					<td ng-class="{selected: editingData[data.id]}">
+						<div ng-hide="editingData[data.id]">{{data.kolumna2}}</div>
+                        <div ng-show="editingData[data.id]"><input type="text" ng-model="data.kolumna2" /></div>
+					</td>
+					<td ng-class="{selected: editingData[data.id]}">
+						<div ng-hide="editingData[data.id]">{{data.kolumna3}}</div>
+                        <div ng-show="editingData[data.id]"><input type="text" ng-model="data.kolumna3" /></div>
+					</td>
+					<td ng-class="{selected: editingData[data.id]}">
+						<div ng-hide="editingData[data.id]">{{data.kolumna4}}</div>
+                        <div ng-show="editingData[data.id]"><input type="text" ng-model="data.kolumna4" /></div>
+					</td>                       
+					<td ng-class="{selected: editingData[data.id]}">
+						<button class="edit circle-button" ng-hide="editingData[data.id]" ng-click="modify(data)">
+							<img src="img/edit.png" alt="edit">
+						</button>
+						<button class="save circle-button" ng-show="editingData[data.id]" ng-click="update(data)">
+							<img src="img/save.png" alt="save">
+						</button>
+						<button class="delete circle-button" ng-click="delete($index)">
+							<img src="img/delete.png" alt="delete">
+						</button>
+					</td>
+					</tr>
+					</tbody>
+				</table></div></div>
+			</div>
+		</div>
+	</div>
+		
+	</div>
+</body>
+</html>

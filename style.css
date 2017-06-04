@@ -1,0 +1,155 @@
+html {
+  height: 100%; }
+
+body {
+  font: 100% Arial;
+  font-size: 12px;
+  height: 100%;
+  margin: 0;
+  color: #3e4349; }
+
+.main-button {
+  color: #fff;
+  background-color: #1d89e4;
+  border-radius: 4px;
+  border-style: none;
+  padding: 5.5px 15px; }
+
+.circle-button {
+  border: none;
+  background: none;
+  border-radius: 50%;
+  padding: 0;
+  height: 21px;
+  cursor: pointer;
+  margin-right: 5px; }
+  .circle-button img {
+    height: 100%;
+    border-radius: 50%; }
+
+#table-wrapper {
+  position: relative; }
+
+#table-scroll {
+  height: 150px;
+  overflow: auto;
+  margin-top: 20px; }
+
+#table-wrapper table {
+  width: 100%; }
+
+#table-wrapper table thead th .text {
+  position: absolute;
+  top: -20px;
+  z-index: 2;
+  height: 20px; }
+
+table {
+  border: 1px solid #1d89e4;
+  border-spacing: 0;
+  width: 80%; }
+  table tr:hover td {
+    background-color: #d2e7fa; }
+  table tr th {
+    background-color: #1d89e4;
+    color: #fff;
+    padding: 10px;
+    border-spacing: 0;
+    text-align: left;
+    font-weight: normal;
+    border-right: 1px solid white; }
+    table tr th:last-child {
+      border-right: none; }
+  table tr td {
+    padding-left: 8px;
+    width: 20%;
+    border-bottom: 1px solid rgba(63, 66, 73, 0.13); }
+    table tr td.selected {
+      background-color: #d2e7fa; }
+    table tr td:last-child {
+      width: 10%; }
+
+.container {
+  height: 100%; }
+  .container header {
+    border-bottom: 2px solid #cecece;
+    background-color: #fff; }
+    .container header h1 {
+      float: left;
+      font-size: 19px;
+      padding-left: 10px; }
+    .container header button {
+      float: right;
+      margin: 10px; }
+    .container header:after {
+      content: "";
+      display: block;
+      clear: both; }
+  .container aside {
+    float: left;
+    width: 229px;
+    background-color: #282b30;
+    overflow: hidden;
+    height: 100%;
+    -webkit-box-shadow: -3px -3px 27px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: -3px -3px 27px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: -3px -3px 27px 0px rgba(50, 50, 50, 0.75); }
+    .container aside nav ul {
+      padding: 0; }
+      .container aside nav ul li {
+        list-style: none; }
+        .container aside nav ul li a {
+          position: relative;
+          color: #fff;
+          border-top: 2px solid #3f4249;
+          text-decoration: none;
+          line-height: 33px;
+          display: block;
+          padding-left: 40px; }
+          .container aside nav ul li a:before {
+            position: absolute;
+            left: 0; }
+          .container aside nav ul li a#element1:before {
+            content: url(img/homeIcon.png);
+            left: 9px;
+            top: 4px; }
+          .container aside nav ul li a#element2:before {
+            content: url(img/userIcon.png);
+            left: 11px;
+            top: 4px; }
+          .container aside nav ul li a#element3:before {
+            content: url(img/icon3.png);
+            left: 11px;
+            top: 4px; }
+  .container .main-page {
+    overflow: hidden;
+    height: 100%;
+    background-color: #eee; }
+    .container .main-page .panel {
+      background-color: #fff;
+      border-radius: 4px;
+      margin: 13px;
+      padding: 10px;
+      border-bottom: 2px solid #cecece; }
+      .container .main-page .panel .panel-title {
+        margin: 0;
+        padding-bottom: 20px; }
+      .container .main-page .panel .row {
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 10px; }
+        .container .main-page .panel .row .add-input {
+          height: 26px;
+          width: 250px;
+          border-radius: 4px;
+          border: 1px solid #a4abbb;
+          margin-left: 10px;
+          padding-left: 10px; }
+      .container .main-page .panel .first-row:after, .container .main-page .panel .second-row:after {
+        content: "";
+        display: block;
+        clear: both; }
+      .container .main-page .panel .main-button {
+        margin-left: 70px; }
+
+/*# sourceMappingURL=style.css.map */
