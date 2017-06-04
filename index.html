@@ -54,11 +54,9 @@
 				
 				<button class="main-button" ng-click="add()">Dodaj</button>
 			</div>
-			<div class="panel">
+			<div class="panel panel-table">
 				<h3 class="panel-title">Zawartość</h3>
-				<div id="table-wrapper">
-  <div id="table-scroll">
-				<table>
+				<table class="table-scroll">
 				<thead>
 					<tr>
 						<th>Kolumna 1</th>
@@ -68,7 +66,7 @@
 						<th></th>
 					</tr>
 					</thead>
-					<tbody>
+					<tbody id="style-8">
 					<tr ng-repeat="data in data">
 					<td ng-class="{selected: editingData[data.id]}">
 						<div ng-hide="editingData[data.id]">{{data.kolumna1}}</div>
@@ -99,7 +97,7 @@
 					</td>
 					</tr>
 					</tbody>
-				</table></div></div>
+				</table>
 			</div>
 		</div>
 	</div>

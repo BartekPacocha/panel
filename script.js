@@ -21,7 +21,28 @@ app.controller("ListController", ['$scope', function($scope) {
 		'kolumna3':'Treść kolumny 3',
 		'kolumna4':'Treść kolumny 4',
 		'id':'2'
-	}];
+	},
+    {
+        'kolumna1':'Treść kolumny 1',
+        'kolumna2':'Treść kolumny 2',
+        'kolumna3':'Treść kolumny 3',
+        'kolumna4':'Treść kolumny 4',
+        'id':'3'
+    },
+    {
+        'kolumna1':'Treść kolumny 1',
+        'kolumna2':'Treść kolumny 2',
+        'kolumna3':'Treść kolumny 3',
+        'kolumna4':'Treść kolumny 4',
+        'id':'4'
+    },
+    {
+        'kolumna1':'Treść kolumny 1',
+        'kolumna2':'Treść kolumny 2',
+        'kolumna3':'Treść kolumny 3',
+        'kolumna4':'Treść kolumny 4',
+        'id':'5'
+    }];
 
 	$scope.editingData = {};
     
